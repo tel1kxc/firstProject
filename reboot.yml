@@ -1,0 +1,6 @@
+---
+- name: restart
+  hosts: all
+  tasks:
+  - name: restart
+    command: /sbin/shutdown -r +1
