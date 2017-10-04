@@ -1,0 +1,7 @@
+---
+- name: subscription-manager
+  hosts: all
+
+  tasks:
+   - name: install subscription-manager
+     yum: name=subscription-manager state=latest

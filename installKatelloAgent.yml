@@ -1,0 +1,7 @@
+---
+- name: install katello
+  hosts: all
+
+  tasks:
+   - name: install katello
+     yum: name=katello-agent state=latest

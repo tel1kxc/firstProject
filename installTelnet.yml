@@ -1,0 +1,10 @@
+---
+- name: install telnet
+  hosts: all
+
+  tasks:
+   - name: install telnet
+     yum: name=telnet state=latest
+
+   - name: install telnet
+     yum: name=telnet state=removed

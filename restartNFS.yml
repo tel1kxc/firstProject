@@ -1,0 +1,10 @@
+---
+- name: test
+  hosts: all
+
+  tasks:
+   - name: stop nfs
+     service: name=nfs state=stopped
+
+   - name: start nfs
+     service: name=nfs state=started

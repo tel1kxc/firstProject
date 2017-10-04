@@ -1,0 +1,6 @@
+---
+- name: register with satelite
+  hosts: all
+  tasks:
+  - name: satelite
+    command: subscription-manager register --force --org="UPS_SP_Design" --activationkey="RHEL7"
