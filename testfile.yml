@@ -1,4 +1,6 @@
 ---
-# create file test
-- name: create file test
-  command: touch /tmp/test
+- name: create a file
+  hosts: all
+  tasks:
+  - name: create a file
+    command: touch /tmp/test
