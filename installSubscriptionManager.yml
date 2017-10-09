@@ -3,9 +3,10 @@
   hosts: all
 
   tasks:
-   -name: test
-    shell: |
-      cd /tmp
-      touch testme
+    -name: test
+     shell: |
+       cd /tmp
+       touch testme
+       exit 0
 #   - name: install subscription-manager
 #     yum: name=subscription-manager state=latest
