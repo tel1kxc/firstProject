@@ -5,8 +5,14 @@
   tasks:
     - name: test
       shell: |
-        cd /tmp
-        touch testme
+        cat > /tmp/CreateYum.repo << _create
+        #!/bin/sh
+        [software_linux74]
+        name = rhel74
+        baseurl = http://10.245.218.89/software/rhel74
+        enabled = 1
+        exit
+        _create
         exit 0
 #   - name: install subscription-manager
 #     yum: name=subscription-manager state=latest
