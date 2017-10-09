@@ -3,7 +3,7 @@
   hosts: all
 
   tasks:
-   -name: setup inital yum
+   -name: test
     shell: |
       cd /tmp
       touch testme
