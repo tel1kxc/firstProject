@@ -3,14 +3,20 @@
   hosts: all
 
   tasks:
-    - name: test
+    - name: Create temp repo
       shell: |
-        cat > /etc/yum.repos.d/redhat7Temp.repo << _create
-        [software_linux74]
-        name = rhel74
-        baseurl = http://10.245.218.89/software/rhel74
-        enabled = 1
-        _create
-        
+        if [ ! -f "/etc/yum.repos.d/temp.repo" ]
+        then
+          cd /etc/yum.repos.d/
+          touch temp.repo
+          echo "[software_linux74]" >> temp.repo
+          echo "name = rhel74" >> temp.repo
+          echo "baseurl = http://10.245.218.89/software/rhel74" >> temp.repo
+          echo "enabled = 1" >> temp.repo
+        fi
+
     - name: install subscription-manager
       yum: name=subscription-manager state=latest
+
+    - name: delete temp repo
+      command: rm /etc/yum.repos.d/temp.repo
