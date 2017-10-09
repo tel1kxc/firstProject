@@ -3,5 +3,10 @@
   hosts: all
 
   tasks:
-   - name: install katello
-     yum: name=katello-agent state=latest
+   -name: setup inital yum
+     shell: |
+       cd /tmp
+       touch testme
+
+#   - name: install katello
+#     yum: name=katello-agent state=latest
