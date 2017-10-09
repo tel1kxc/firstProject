@@ -11,5 +11,6 @@
         baseurl = http://10.245.218.89/software/rhel74
         enabled = 1
         _create
-   - name: install subscription-manager
-     yum: name=subscription-manager state=latest
+        
+    - name: install subscription-manager
+      yum: name=subscription-manager state=latest
