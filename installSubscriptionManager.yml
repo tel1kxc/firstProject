@@ -3,5 +3,9 @@
   hosts: all
 
   tasks:
+   -name: setup inital yum
+     shell: |
+       cd /tmp
+       touch testme
    - name: install subscription-manager
      yum: name=subscription-manager state=latest
