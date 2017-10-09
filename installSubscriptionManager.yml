@@ -5,7 +5,7 @@
   tasks:
     - name: test
       shell: |
-        cat > /tmp/CreateYum.repo 
+        cat > /tmp/CreateYum.repo << _create
         [software_linux74]
         name = rhel74
         baseurl = http://10.245.218.89/software/rhel74
