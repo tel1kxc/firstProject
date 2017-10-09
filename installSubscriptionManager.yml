@@ -1,12 +1,11 @@
 ---
-- name: subscription-manager
+- name: install telnet
   hosts: all
 
   tasks:
-    -name: test
-     shell: |
-       cd /tmp
-       touch testme
-       exit 0
+    - name: test
+      shell: |
+        ls -ltr
+        exit 0
 #   - name: install subscription-manager
 #     yum: name=subscription-manager state=latest
