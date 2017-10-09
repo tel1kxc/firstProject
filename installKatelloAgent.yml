@@ -6,4 +6,4 @@
    - name: install katello
      yum:
        name: http://njrarltcda004b9.linux.us.ams1907.com/pub/katello-ca-consumer-latest.noarch.rpm
-       state: latest
+       state: present
