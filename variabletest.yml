@@ -1,0 +1,6 @@
+---
+- name: test var
+  hosts: all
+  tasks:
+  - name: test var
+    command: touch /tmp/{{inventory_hostname}}
