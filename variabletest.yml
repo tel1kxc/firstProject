@@ -3,4 +3,4 @@
   hosts: all
   tasks:
   - name: test var
-    command: touch /tmp/{{inventory_hostname}}
+    command: echo {{inventory_test}} >> /tmp/{{inventory_hostname}}
