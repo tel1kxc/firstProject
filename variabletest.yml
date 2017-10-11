@@ -3,4 +3,4 @@
   hosts: all
   tasks:
   - name: test var
-    command: echo {{ vars | test }} >> /tmp/{{inventory_hostname}}
+    command: echo hostvars[test] >> /tmp/{{inventory_hostname}}
