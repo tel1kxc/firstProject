@@ -3,4 +3,5 @@
   hosts: all
   tasks:
   - name: test var
-    command: echo {{foreman.location_name}} >> /tmp/{{inventory_hostname}}
+    debug:
+      msg: "location={{foreman.location_name}}-server={{inventory_hostname}}
