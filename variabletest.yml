@@ -4,4 +4,4 @@
   tasks:
   - name: test var
     debug:
-      msg: "location={{ups_owner}}-server={{inventory_hostname}}"
+      msg: "location={{foreman_params.ups_owner}}-server={{inventory_hostname}}"
