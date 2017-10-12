@@ -4,4 +4,4 @@
   tasks:
   - name: test var
     debug:
-      msg: "location={{foreman.location_name}}-server={{inventory_hostname}}
+      msg: "location={{foreman.location_name}}-server={{inventory_hostname}}"
